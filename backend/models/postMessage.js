@@ -1,7 +1,7 @@
 import { Sequelize, DataTypes, STRING } from 'sequelize';
 
 const sequelize = new Sequelize('mydb', 'mysql', '1234', {
-  host: '192.168.64.2',
+  host: '<ip address fro mysql docker container>',
   dialect: 'mysql'/* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
 });
 

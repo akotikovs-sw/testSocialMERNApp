@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, AppBar, Typography, Grow, Grid } from "@mui/material";
-import Form from "./components/Form/Form.component";
-import Posts from './components/Posts/Posts.component';
+import Form from "./components/Form";
+import Posts from './components/Posts';
 
 import memories from './images/memories.png';
 

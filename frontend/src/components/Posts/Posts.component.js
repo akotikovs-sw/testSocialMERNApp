@@ -4,7 +4,9 @@ import Post from "../Post/Post.component";
 
 import useStyles from './Posts.styles';
 
-export const PostsComponent = () => {
+export const PostsComponent = (props) => {
+  const { posts } = props;
+
   const classes = useStyles();
 
   return (
