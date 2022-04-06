@@ -1,9 +1,5 @@
-import { Sequelize, DataTypes, STRING } from 'sequelize';
-
-const sequelize = new Sequelize('mydb', 'mysql', '1234', {
-  host: '<ip address fro mysql docker container>',
-  dialect: 'mysql'/* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
-});
+import { DataTypes } from 'sequelize';
+import { sequelize } from '../utils/db.js';
 
 const PostMessage = sequelize.define('PostMessage', {
   title: {

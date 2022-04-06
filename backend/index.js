@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import { Sequelize } from 'sequelize';
+import { sequelize } from './utils/db.js';
 
 import postRoutes from './routes/posts.js';
 
@@ -12,13 +12,6 @@ app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors());
 
 const PORT = process.env.PORT || 5000;
-
-// Connect to the database via sequilize
-
-const sequelize = new Sequelize('mydb', 'mysql', '1234', {
-  host: '<ip address from mysql>',
-  dialect: 'mysql'/* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
-});
 
 app.use('/posts', postRoutes);
 
